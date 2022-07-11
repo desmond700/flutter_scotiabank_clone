@@ -92,13 +92,14 @@ class _MyAccountsPageState extends State<MyAccountsPage> {
             ],
           ),
           const SizedBox(height: 30),
-          const ScotiabankListItem(
-            leading: Icon(
+          ScotiabankListItem(
+            borderRadius: BorderRadius.circular(10.0),
+            leading: const Icon(
               Icons.credit_card,
               color: Colors.black,
               size: 24
             ),
-            title: Text(
+            title: const Text(
               "Add a new product",
               style: TextStyle(
                 color: Colors.black,
@@ -106,7 +107,7 @@ class _MyAccountsPageState extends State<MyAccountsPage> {
                 fontWeight: FontWeight.w700
               ),
             ),
-            trailing: Icon(
+            trailing: const Icon(
               Icons.chevron_right,
               color: Colors.black,
               size: 24
@@ -115,13 +116,14 @@ class _MyAccountsPageState extends State<MyAccountsPage> {
           const SizedBox(height: 12),
           Column(
             children: [
-              const ScotiabankListItem(
-                leading: Icon(
+              ScotiabankListItem(
+                borderRadius: BorderRadius.circular(10.0),
+                leading: const Icon(
                   Icons.local_offer,
                   color: Helpers.appColor,
                   size: 24.0,
                 ),
-                title: Text(
+                title: const Text(
                   "Offers and programs \n(3)",
                   softWrap: true,
                   style: TextStyle(
@@ -130,8 +132,8 @@ class _MyAccountsPageState extends State<MyAccountsPage> {
                     fontWeight: FontWeight.w700
                   ),
                 ),
-                subTrailing: NewIndicator(),
-                trailing: Icon(
+                subTrailing: const NewIndicator(),
+                trailing: const Icon(
                   Icons.chevron_right,
                   color: Colors.black,
                   size: 24

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_scotiabank_clone/pages/bills/bills_page.dart';
+import 'package:flutter_scotiabank_clone/pages/e-transfer/e_transfer_page.dart';
 import 'package:flutter_scotiabank_clone/pages/home/home_page.dart';
 import 'package:flutter_scotiabank_clone/pages/login/login_page.dart';
+import 'package:flutter_scotiabank_clone/pages/transfer_between_accounts/transfer_between_accounts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +32,8 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white),
       routes: {
         LoginPage.id: (_) => const LoginPage(),
-        HomePage.id: (_) => const HomePage()
+        HomePage.id: (_) => const HomePage(),
+        // ETransferPage.id: (_) => const ETransferPage(),
       },
       initialRoute: LoginPage.id
     );

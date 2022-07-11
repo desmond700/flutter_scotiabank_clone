@@ -5,7 +5,11 @@ import 'package:flutter_scotiabank_clone/pages/my_updates/my_updates_page.dart';
 import 'package:flutter_scotiabank_clone/widgets/custom_sliver_persistent%5C_header_delegate.dart';
 
 class FrontPage extends StatefulWidget {
-  const FrontPage({ Key? key }) : super(key: key);
+  const FrontPage({ 
+    Key? key,
+    required this.parentContext }) : super(key: key);
+
+  final BuildContext parentContext;
 
   @override
   State<FrontPage> createState() => _FrontPageState();

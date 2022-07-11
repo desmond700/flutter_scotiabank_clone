@@ -18,6 +18,7 @@ class _MyUpdatesPageState extends State<MyUpdatesPage> {
         padding: const EdgeInsets.symmetric(vertical: 14.0, horizontal: 14.0),
         children: [
           ScotiabankListItem(
+            borderRadius: BorderRadius.circular(10.0),
             title: Text(
               "Recent statements",
               style: TextStyle(
@@ -36,6 +37,7 @@ class _MyUpdatesPageState extends State<MyUpdatesPage> {
           ),
           const SizedBox(height: 15),
           ScotiabankListItem(
+            borderRadius: BorderRadius.circular(10.0),
             title: Text(
               "TransUnion Credit Score",
               style: TextStyle(
@@ -65,14 +67,13 @@ class _MyUpdatesPageState extends State<MyUpdatesPage> {
                     fontWeight: FontWeight.w700
                   ),
                 ),
-                Icon(
+                const Icon(
                   Icons.info_outline,
                   color: Color.fromARGB(255, 22, 95, 124),
                   size: 24,
                 )
               ],
             ),
-            items: [],
             placeholder: Padding(
               padding: const EdgeInsets.only(top: 30.0),
               child: Text(
@@ -84,6 +85,7 @@ class _MyUpdatesPageState extends State<MyUpdatesPage> {
                 ),
               ),
             ),
+            items: [],
           )
         ],
       ),
