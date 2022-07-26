@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_scotiabank_clone/widgets/scotiabank_widgets.dart';
 
 import '../../helpers/helpers.dart';
 
@@ -139,30 +140,9 @@ class _RequestPageState extends State<RequestPage> {
           Expanded(
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: Container(
-                height: 60.0,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey.shade200),
-                  borderRadius: BorderRadius.circular(30.0)
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 60.0,
-                      width: 70.0,
-                      decoration: BoxDecoration(
-                        color: Helpers.appColor,
-                        borderRadius: BorderRadius.circular(30.0)
-                      ),
-                      child: const Icon(
-                        CupertinoIcons.arrow_right,
-                        color: Colors.white,
-                        size: 28.0,
-                      )
-                    )
-                  ],
-                ),
+              child: ScotiabankSlider(
+                label: "Slide to request",
+                onSliderEnd: () {}
               ),
             )
           )

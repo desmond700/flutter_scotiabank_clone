@@ -14,6 +14,8 @@ class MyAccountsPage extends StatefulWidget {
 class _MyAccountsPageState extends State<MyAccountsPage> {
 
   late BoxDecoration decoration;
+  final double chequingAccountBalance = 20433;
+  final double savingsAccountBalance = 453231;
 
   @override
   void initState() {
@@ -77,18 +79,20 @@ class _MyAccountsPageState extends State<MyAccountsPage> {
             header: const _AccountHeader(accountCount: 2,),
             items: [
               _AccountItem(
-                  accountBalance: 20433, 
+                  accountBalance: chequingAccountBalance, 
                   accountName: 'Basic', 
                   accountNumber: "5156",
                   onTap: (){},
                 ),
                 _AccountItem(
-                  accountBalance: 453231, 
+                  accountBalance: savingsAccountBalance, 
                   accountName: 'Money Master', 
                   accountNumber: "5217",
                   onTap: (){}
                 ),
-                const _AccountTotal()
+                _AccountTotal(
+                  total: chequingAccountBalance + savingsAccountBalance
+                )
             ],
           ),
           const SizedBox(height: 30),
@@ -235,7 +239,9 @@ class _MyAccountsPageState extends State<MyAccountsPage> {
 class _AccountTotal extends StatelessWidget {
   const _AccountTotal({
     Key? key,
-  }) : super(key: key);
+   required this.total }) : super(key: key);
+
+  final double total;
 
   @override
   Widget build(BuildContext context) {
@@ -243,8 +249,8 @@ class _AccountTotal extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20.0, right: 15.0, bottom: 30.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
-          Text(
+        children: [
+          const Text(
             "Total:",
             style: TextStyle(
               color: Colors.black,
@@ -253,8 +259,8 @@ class _AccountTotal extends StatelessWidget {
             )
           ),
           Text(
-            "\$43234.94",
-            style: TextStyle(
+            "\$${Helpers.toCurrency(total)}",
+            style: const TextStyle(
               color: Colors.black,
               fontSize: 14.0,
               fontWeight: FontWeight.w400
@@ -351,7 +357,7 @@ class _AccountItem extends StatelessWidget {
                 ),
                 const SizedBox(height: 1),
                 Text(
-                  "\$$accountBalance",
+                  "\$${Helpers.toCurrency(accountBalance)}",
                   style: const TextStyle(
                     color: Colors.black,
                     fontSize: 14.0,
