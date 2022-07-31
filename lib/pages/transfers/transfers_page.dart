@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_scotiabank_clone/pages/deposit_a_check/deposit_cheque_page.dart';
 import 'package:flutter_scotiabank_clone/pages/e-transfer/e_transfer_page.dart';
-import 'package:flutter_scotiabank_clone/pages/transfer_between_accounts/transfer_between_accounts.dart';
-import 'package:flutter_scotiabank_clone/widgets/custom_sliver_persistent%5C_header_delegate.dart';
 import 'package:flutter_scotiabank_clone/widgets/scotiabank_widgets.dart';
 
 class TransfersPage extends StatefulWidget {

@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_scotiabank_clone/helpers/helpers.dart';
 import 'package:flutter_scotiabank_clone/pages/login/login_page.dart';
-import 'package:flutter_scotiabank_clone/widgets/custom_sliver_persistent%5C_header_delegate.dart';
 import 'package:flutter_scotiabank_clone/widgets/scotiabank_widgets.dart';
 
 class ListItem {
